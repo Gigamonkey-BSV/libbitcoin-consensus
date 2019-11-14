@@ -1,22 +1,9 @@
-[![Build Status](https://travis-ci.org/libbitcoin/libbitcoin-consensus.svg?branch=master)](https://travis-ci.org/libbitcoin/libbitcoin-consensus)
-
-[![Coverage Status](https://coveralls.io/repos/libbitcoin/libbitcoin-consensus/badge.svg)](https://coveralls.io/r/libbitcoin/libbitcoin-consensus)
-
 # Libbitcoin Consensus
 
-*Bitcoin consensus library*
+Forked from https://github.com/libbitcoin/libbitcoin-consensus
 
-## Installation
-
-```sh
-$ ./autogen.sh
-$ ./configure
-$ make
-$ sudo make install
-$ sudo ldconfig
-```
-
-`libbitcoin-consensus` is now installed in `/usr/local/`.
+## Goal
+ * remove bitcoin core consensus files make it work with local copy of bitcoin-sv.  
 
 ## Dependencies
 
