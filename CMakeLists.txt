@@ -42,6 +42,11 @@ if(Boost_FOUND)
 
 endif()
 
+# Find GMP
+find_package(GMP REQUIRED)
+if(GMP_FOUND)
+    include_directories(${GMP_INCLUDE_DIR})
+endif()
 
 
 # Find LibBitcoin
@@ -61,15 +66,27 @@ endif()
 ## Enable testing
 include(CTest)
 
-if(PACKAGE_TESTS)
-    enable_testing()	
-endif()
 
+    enable_testing()
+    add_subdirectory(test)
 
 #  Add Library source files here
 
 ADD_LIBRARY(libbitcoin-consensus STATIC
-src/consensus/consensus.cpp
+        src/clone/hash.cpp
+        src/clone/pubkey.cpp
+        src/clone/uint256.cpp
+        src/clone/crypto/hmac_sha512.cpp
+        src/clone/crypto/ripemd160.cpp
+        src/clone/crypto/sha1.cpp
+        src/clone/crypto/sha256.cpp
+        src/clone/crypto/sha512.cpp
+        src/clone/primitives/transaction.cpp
+        src/clone/script/interpreter.cpp
+        src/clone/script/script.cpp
+        src/clone/util/strencodings.cpp
+        src/consensus/consensus.cpp
+
 )        
 
 target_include_directories(libbitcoin-consensus PUBLIC include/ src/ src/clone/)
