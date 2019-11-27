@@ -72,7 +72,7 @@ ADD_LIBRARY(libbitcoin-consensus STATIC
 src/consensus/consensus.cpp
 )        
 
-target_include_directories(libbitcoin-consensus PUBLIC src/consensus/)
+target_include_directories(libbitcoin-consensus PUBLIC include/ src/ src/clone/)
 
 # Set C++ version
 target_compile_features(libbitcoin-consensus PUBLIC cxx_std_17)
