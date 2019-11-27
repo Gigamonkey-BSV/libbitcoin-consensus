@@ -26,3 +26,6 @@ libbitcoin-consensus.pc
 bin
 obj
 
+/build
+/cmake-build*
+/.idea
