@@ -69,12 +69,12 @@ endif()
 #  Add Library source files here
 
 ADD_LIBRARY(libbitcoin-consensus STATIC
-
+src/consensus/consensus.cpp
 )        
 
 target_include_directories(libbitcoin-consensus PUBLIC src/consensus/)
 
 # Set C++ version
-target_compile_features(data PUBLIC cxx_std_17)
-set_target_properties(data PROPERTIES CXX_EXTENSIONS OFF)
+target_compile_features(libbitcoin-consensus PUBLIC cxx_std_17)
+set_target_properties(libbitcoin-consensus PROPERTIES CXX_EXTENSIONS OFF)
 
