@@ -71,20 +71,17 @@ typedef enum verify_result_type
 
     // Softfork safeness
     verify_result_discourage_upgradable_nops,
-    verify_result_discourage_upgradable_witness_program,
+
+    // Misc
+    verify_result_noncompressed_pubkey,
+
+    // Anti Replay
+    verify_result_illegal_forkid,
+    verify_result_must_use_forkid,
 
     // Other
     verify_result_op_return,
     verify_result_unknown_error,
-
-    // Segregated witness
-    verify_result_witness_program_wrong_length,
-    verify_result_witness_program_empty_witness,
-    verify_result_witness_program_mismatch,
-    verify_result_witness_malleated,
-    verify_result_witness_malleated_p2sh,
-    verify_result_witness_unexpected,
-    verify_result_witness_pubkeytype,
 
     // augmention codes for tx deserialization
     verify_result_tx_invalid,
@@ -189,12 +186,12 @@ typedef enum verify_flags_type
     /**
      * SCRIPT_VERIFY_WITNESS (bip141).
      */
-    verify_flags_witness = (1U << 11),
+    // verify_flags_witness = (1U << 11),
 
     /**
      * SCRIPT_VERIFY_DISCOURAGE_UPGRADABLE_WITNESS_PROGRAM (bip141 policy).
      */
-    verify_flags_discourage_upgradable_witness_program = (1U << 12),
+    //verify_flags_discourage_upgradable_witness_program = (1U << 12),
 
     /**
      * SCRIPT_VERIFY_MINIMALIF (bip141 p2wsh policy).
@@ -209,7 +206,7 @@ typedef enum verify_flags_type
     /**
      * SCRIPT_VERIFY_WITNESS_PUBKEYTYPE (bip141/bip143 p2wsh/p2wpkh policy).
      */
-    verify_flags_witness_public_key_compressed = (1U << 15)
+//    verify_flags_witness_public_key_compressed = (1U << 15)
 } verify_flags;
 
 /**

@@ -73,23 +73,23 @@ include(CTest)
 #  Add Library source files here
 
 ADD_LIBRARY(libbitcoin-consensus STATIC
-        src/clone/hash.cpp
-        src/clone/pubkey.cpp
-        src/clone/uint256.cpp
-        src/clone/crypto/hmac_sha512.cpp
-        src/clone/crypto/ripemd160.cpp
-        src/clone/crypto/sha1.cpp
-        src/clone/crypto/sha256.cpp
-        src/clone/crypto/sha512.cpp
-        src/clone/primitives/transaction.cpp
-        src/clone/script/interpreter.cpp
-        src/clone/script/script.cpp
-        src/clone/util/strencodings.cpp
+        src/clone-sv/hash.cpp
+        src/clone-sv/pubkey.cpp
+        src/clone-sv/uint256.cpp
+        src/clone-sv/crypto/hmac_sha512.cpp
+        src/clone-sv/crypto/ripemd160.cpp
+        src/clone-sv/crypto/sha1.cpp
+        src/clone-sv/crypto/sha256.cpp
+        src/clone-sv/crypto/sha512.cpp
+        src/clone-sv/primitives/transaction.cpp
+        src/clone-sv/script/interpreter.cpp
+        src/clone-sv/script/script.cpp
+        src/clone-sv/utilstrencodings.cpp
         src/consensus/consensus.cpp
 
 )        
 
-target_include_directories(libbitcoin-consensus PUBLIC include/ src/ src/clone/)
+target_include_directories(libbitcoin-consensus PUBLIC include/ src/ src/clone-sv/)
 
 # Set C++ version
 target_compile_features(libbitcoin-consensus PUBLIC cxx_std_17)
