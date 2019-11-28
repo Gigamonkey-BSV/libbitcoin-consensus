@@ -153,21 +153,6 @@ BOOST_AUTO_TEST_CASE(consensus__script_verify__valid__true)
     BOOST_REQUIRE_EQUAL(result, verify_result_eval_true);
 }
 
-BOOST_AUTO_TEST_CASE(consensus__script_verify__valid_nested_p2wpkh__true)
-{
-    static const auto index = 0u;
-    static const auto value = 500000u;
-    static const uint32_t flags =
-        verify_flags_p2sh |
-        verify_flags_dersig |
-        verify_flags_nulldummy |
-        verify_flags_checklocktimeverify |
-        verify_flags_checksequenceverify |
-        verify_flags_witness;
-
-    const verify_result result = test_verify(CONSENSUS_SCRIPT_VERIFY_WITNESS_TX, CONSENSUS_SCRIPT_VERIFY_WITNESS_PREVOUT_SCRIPT, value, index, flags);
-    BOOST_REQUIRE_EQUAL(result, verify_result_eval_true);
-}
 
 // TODO: create negative test vector.
 //BOOST_AUTO_TEST_CASE(consensus__script_verify__invalid__false)

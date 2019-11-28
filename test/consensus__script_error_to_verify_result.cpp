@@ -197,48 +197,6 @@ BOOST_AUTO_TEST_CASE(consensus__script_error_to_verify_result___DISCOURAGE_UPGRA
     BOOST_REQUIRE_EQUAL(script_error_to_verify_result(SCRIPT_ERR_DISCOURAGE_UPGRADABLE_NOPS), verify_result_discourage_upgradable_nops);
 }
 
-BOOST_AUTO_TEST_CASE(consensus__script_error_to_verify_result___DISCOURAGE_UPGRADABLE_WITNESS_PROGRAM___discourage_upgradable_witness_program)
-{
-    BOOST_REQUIRE_EQUAL(script_error_to_verify_result(SCRIPT_ERR_DISCOURAGE_UPGRADABLE_WITNESS_PROGRAM), verify_result_discourage_upgradable_witness_program);
-}
-
-// Segregated witness
-
-BOOST_AUTO_TEST_CASE(consensus__script_error_to_verify_result___WITNESS_PROGRAM_WRONG_LENGTH___witness_program_wrong_length)
-{
-    BOOST_REQUIRE_EQUAL(script_error_to_verify_result(SCRIPT_ERR_WITNESS_PROGRAM_WRONG_LENGTH), verify_result_witness_program_wrong_length);
-}
-
-BOOST_AUTO_TEST_CASE(consensus__script_error_to_verify_result___WITNESS_PROGRAM_WITNESS_EMPTY___witness_program_empty_witness)
-{
-    BOOST_REQUIRE_EQUAL(script_error_to_verify_result(SCRIPT_ERR_WITNESS_PROGRAM_WITNESS_EMPTY), verify_result_witness_program_empty_witness);
-}
-
-BOOST_AUTO_TEST_CASE(consensus__script_error_to_verify_result___WITNESS_PROGRAM_MISMATCH___witness_program_mismatch)
-{
-    BOOST_REQUIRE_EQUAL(script_error_to_verify_result(SCRIPT_ERR_WITNESS_PROGRAM_MISMATCH), verify_result_witness_program_mismatch);
-}
-
-BOOST_AUTO_TEST_CASE(consensus__script_error_to_verify_result___WITNESS_MALLEATED___witness_malleated)
-{
-    BOOST_REQUIRE_EQUAL(script_error_to_verify_result(SCRIPT_ERR_WITNESS_MALLEATED), verify_result_witness_malleated);
-}
-
-BOOST_AUTO_TEST_CASE(consensus__script_error_to_verify_result___WITNESS_MALLEATED_P2SH___witness_malleated_p2sh)
-{
-    BOOST_REQUIRE_EQUAL(script_error_to_verify_result(SCRIPT_ERR_WITNESS_MALLEATED_P2SH), verify_result_witness_malleated_p2sh);
-}
-
-BOOST_AUTO_TEST_CASE(consensus__script_error_to_verify_result___WITNESS_UNEXPECTED___witness_unexpected)
-{
-    BOOST_REQUIRE_EQUAL(script_error_to_verify_result(SCRIPT_ERR_WITNESS_UNEXPECTED), verify_result_witness_unexpected);
-}
-
-BOOST_AUTO_TEST_CASE(consensus__script_error_to_verify_result___WITNESS_PUBKEYTYPE___witness_pubkeytype)
-{
-    BOOST_REQUIRE_EQUAL(script_error_to_verify_result(SCRIPT_ERR_WITNESS_PUBKEYTYPE), verify_result_witness_pubkeytype);
-}
-
 // Other
 
 BOOST_AUTO_TEST_CASE(consensus__script_error_to_verify_result__OP_RETURN__op_return)
